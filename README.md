@@ -1,70 +1,46 @@
-# GitHub Codespaces ♥️ React
+# SkillSprint - atividade React
 
-Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
+Aplicação web responsiva para a atividade de React. O projeto foi construído com React, ReactDOM, Vite e CSS puro, sem biblioteca visual externa.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+## Como executar
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+```bash
+npm install
+npm start
+```
 
-This project was bootstrapped for you with [Vite](https://vitejs.dev/).
+O projeto inicia o Vite na porta `3000`. Também podemos usar `npm run dev` para executar manualmente. Para gerar a versão de produção:
 
-## Available Scripts
+```bash
+npm run build
+```
 
-In the project directory, you can run:
+## Estrutura principal
 
-### `npm start`
+- `src/App.jsx`: componente principal que orquestra a tela, filtros, paginação e feedbacks.
+- `src/App.js`: entrada compatível mantida com o nome solicitado no enunciado.
+- `src/components/Accordion.jsx`: itens expansíveis com apenas um item aberto por vez.
+- `src/components/Pagination.jsx`: navegação por página anterior, próxima e páginas específicas.
+- `src/components/ProgressBar.jsx`: barra que recebe o progresso por props.
+- `src/components/ProgressOverview.jsx`: resumo que consome o estado global e passa o percentual para a barra.
+- `src/components/Tabs.jsx`: abas com conteúdo correspondente e estado local.
+- `src/components/DropdownMenu.jsx`: menu com abertura, fechamento por seleção e clique externo.
+- `src/components/MobileNavigation.jsx`: menu principal responsivo com botão, todas as opções, Escape e clique externo.
+- `src/components/BackToTopButton.jsx`: botão acessível que aparece após a rolagem e retorna suavemente ao topo.
+- `src/components/ToastNotification.jsx`: mensagem temporária com fechamento manual e automático.
+- `src/components/TopicCard.jsx`: cartão de tema que consome o estado global para concluir tarefas.
+- `src/context/AppContext.jsx`: Context API usada como desafio extra para compartilhar as tarefas concluídas.
+- `ROTEIRO_VIDEO_DETALHADO.md`: roteiro operacional com cliques exatos na interface e buscas exatas no código.
+- `src/data/content.js`: dados apresentados nos componentes.
+- `src/styles.css`: layout responsivo, semântica visual e estados de foco.
 
-We've already run this for you in the `Codespaces: server` terminal window below. If you need to stop the server for any reason you can just run `npm start` again to bring it back online.
+## Requisitos atendidos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000/](http://localhost:3000/) in the built-in Simple Browser (`Cmd/Ctrl + Shift + P > Simple Browser: Show`) to view your running application.
-
-The page will reload automatically when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Vite documentation](https://vitejs.dev/guide/).
-
-To learn Vitest, a Vite-native testing framework, go to [Vitest documentation](https://vitest.dev/guide/)
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://sambitsahoo.com/blog/vite-code-splitting-that-works.html](https://sambitsahoo.com/blog/vite-code-splitting-that-works.html)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf](https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf)
-
-### Advanced Configuration
-
-This section has moved here: [https://vitejs.dev/guide/build.html#advanced-base-options](https://vitejs.dev/guide/build.html#advanced-base-options)
-
-### Deployment
-
-This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
-
-### Troubleshooting
-
-This section has moved here: [https://vitejs.dev/guide/troubleshooting.html](https://vitejs.dev/guide/troubleshooting.html)
+- Seis componentes visuais obrigatórios implementados como componentes React.
+- Uso de props, `useState`, `useEffect`, eventos e Context API compartilhando tarefas entre cartões e progresso.
+- HTML semântico, atributos ARIA e foco visível.
+- Responsividade para desktop, tablet e smartphone.
+- Menu principal mobile sem esconder as opções de navegação.
+- Botão de retorno ao topo para facilitar a navegação em páginas longas.
+- Código modular e sem dependências de UI desnecessárias.
+- Configuração de GitHub Codespaces incluída.

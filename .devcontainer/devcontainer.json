@@ -1,26 +1,24 @@
 {
+  "name": "SkillSprint React",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "hostRequirements": {
     "cpus": 4
   },
   "waitFor": "onCreateCommand",
   "updateContentCommand": "npm install",
-  "postCreateCommand": "",
   "postAttachCommand": {
     "server": "npm start"
   },
-  "customizations": {
-    "codespaces": {
-      "openFiles": [
-        "src/App.jsx"
-      ]
-    }
-  },
+  "forwardPorts": [3000],
   "portsAttributes": {
     "3000": {
-      "label": "Application",
+      "label": "SkillSprint",
       "onAutoForward": "openPreview"
     }
   },
-  "forwardPorts": [3000]
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["src/App.jsx"]
+    }
+  }
 }
